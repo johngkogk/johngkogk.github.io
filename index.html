@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Εισαγωγή στον Προγραμματισμό – GitHub Pages</title>
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #4e73df, #1cc88a);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 0.2em;
-        }
-        h2 {
-            font-weight: 400;
-            margin-top: 0;
-            color: #e2e8f0;
-        }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9em;
-            color: #d1d1d1;
-        }
-        a {
-            color: #f1f1f1;
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #ffd700;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Εισαγωγή στον Προγραμματισμό – GitHub Pages</title>
+<style>
+  :root { --grad1:#4e73df; --grad2:#1cc88a; --grad3:#36b9cc; }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; color:#fff; text-align:center;
+    background: linear-gradient(135deg, var(--grad1), var(--grad2), var(--grad3));
+    background-size: 200% 200%;
+    animation: gyroBG 18s ease-in-out infinite;
+  }
+  @keyframes gyroBG{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  .card{
+    padding:28px 32px; border-radius:18px; backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.06); box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    max-width:860px; width:min(92%, 860px); animation: fadeIn 900ms ease-out both;
+  }
+  @keyframes fadeIn{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+  h1{margin:.1em 0 .1em; font-size:clamp(24px,4vw,36px)}
+  h2{margin:.1em 0 1em; font-weight:500; color:#e6f0ff}
+  p{margin:.5em 0 0}
+  footer{
+    position:fixed; bottom:14px; left:0; right:0; text-align:center;
+    font-size:.92em; color:#e8f5f2; opacity:.9;
+  }
+  a{color:#fff; text-decoration:underline} a:hover{opacity:.9}
+</style>
 </head>
 <body>
-    <h1>👋 Καλώς ήρθες στη σελίδα του John Gkogk!</h1>
+  <section class="card">
+    <h1>👋 Καλώς ήρθες στη σελίδα του <strong>John Gkogk</strong>!</h1>
     <h2>Εργασία #0 – Εισαγωγή στον Προγραμματισμό (ΕΚΠΑ)</h2>
     <p>Αυτό είναι το προσωπικό μου GitHub Pages site για το μάθημα.</p>
-    <footer>
-        Φοιτητής: <strong>John Gkogk</strong> · Τμήμα Πληροφορικής & Τηλεπικοινωνιών · Οκτώβριος 2025
-        <br><br>
+    <p>Δες το προφίλ μου στο <a href="https://github.com/johngkogk">GitHub</a>.</p>
+  </section>
+  <footer>Τμήμα Πληροφορικής & Τηλεπικοινωνιών · Οκτώβριος 2025</footer>
+</body>
+</html>
+
         <a href="https://github.com/johngkogk">Προφίλ GitHub</a>
     </footer>
 </body>
